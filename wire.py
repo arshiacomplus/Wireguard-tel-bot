@@ -19,6 +19,7 @@ from retrying import retry
 from requests.exceptions import ConnectionError
 import subprocess
 import platform
+bot = telebot.TeleBot("token")
 ips=["162.159.193.96:878", "162.159.193.133:894","162.159.195.54:894","162.159.192.65:894","162.159.192.3:908","162.159.195.166:878","162.159.195.7:894", "162.159.192.214:894","162.159.193.84:878"]
 ipsv6=["[2606:4700:d0::6996:c14:bcb0:b1d2]:878","[2606:4700:d1::a4b9:95c0:37ca:601e]:878","[2606:4700:d0::7050:964d:9980:9067]:878","[2606:4700:d0::cfcb:5601:66a:e8e8]:878","[2606:4700:d0::45dd:b927:8c4d:ceec]:878","[2606:4700:d1::d3f:23c9:46fc:c876]:878"]
 name=""
@@ -666,7 +667,7 @@ AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = {ip_check[0].split(':')[0]}:{int(ip_check[1].split(':')[1])}''')
     return "For [[mahsaNg](https://github.com/GFW-knocker/MahsaNG/releases) , [nikaNg](https://github.com/mahsanet/NikaNG/releases) ] ng without noise: \U0001FAF5 \n\nipv4: \U0001F97A\n\n"+wireguard_urll+"\n\nipv6: \U0001F97A\n\n"+ wireguard_urll2+"\n\n For [[mahsaNg](https://github.com/GFW-knocker/MahsaNG/releases) , [nikaNg](https://github.com/mahsanet/NikaNG/releases) ] ng with noise: \U0001FAF5"+" \n\nipv4: \U0001F97A\n\n"+wireguard_urll_nika+"\n\nipv6:  \U0001F97A \n\n"+ wireguard_urll_nika_v6+ "\n\nFor [hiddify](https://github.com/hiddify/hiddify-next/releases) next: \U0001FAF5 "+f'```js\n\n{conf}``` \n\n ```ipv4\n\nwarp://{ip_check[0]}/?ifp=1-3&ifpm=m4#IR&&detour=warp://{ip_check[1]}/?ifp=1-3&ifpm=m5#DE```\n```ipv6\nwarp://{endpointv6}/?ifp=1-3&ifpm=m4#IR&&detour=warp://{endpointv6}/?ifp=1-3&ifpm=m5#DE\n```'+"\n\nMainChannel= [@arshia_mod_fun](tg://user?id=2093246093) \U0001F977\nChannel= @warpscanner \U0001F977" ,"\n\n For Xray cores [[mahsaNg](https://github.com/GFW-knocker/MahsaNG/releases) , [nikaNg](https://github.com/mahsanet/NikaNG/releases) ]\n\n"+f"```js \n {WoW_v3}``` "
 
-bot = telebot.TeleBot("7879556307:AAGhAqp9yDCL0LXx0h2xgFBR5igM5AK9E0o")
+
 
 @bot.message_handler(commands=['start', 'help','stop'])
 def send_welcome(message):
