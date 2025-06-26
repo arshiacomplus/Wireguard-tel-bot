@@ -20,6 +20,7 @@ from requests.exceptions import ConnectionError
 import subprocess
 import platform
 bot = telebot.TeleBot("token")
+CH_ID="@warpscanner"
 ips=["162.159.193.96:878", "162.159.193.133:894","162.159.195.54:894","162.159.192.65:894","162.159.192.3:908","162.159.195.166:878","162.159.195.7:894", "162.159.192.214:894","162.159.193.84:878"]
 ipsv6=["[2606:4700:d0::6996:c14:bcb0:b1d2]:878","[2606:4700:d1::a4b9:95c0:37ca:601e]:878","[2606:4700:d0::7050:964d:9980:9067]:878","[2606:4700:d0::cfcb:5601:66a:e8e8]:878","[2606:4700:d0::45dd:b927:8c4d:ceec]:878","[2606:4700:d1::d3f:23c9:46fc:c876]:878"]
 name=""
@@ -707,19 +708,19 @@ def send_welcome(message):
         button5=types.InlineKeyboardButton("Hiddify",url="https://github.com/hiddify/hiddify-next/releases")
         markup.add(button1 , button2, button3 , button4,button5)
         ad1 , ad2=generate_wireguard_url(config,ip,ipv6)
-        bot.send_sticker("@warpscanner","CAACAgQAAxkBAX2LwWbTdiwXZXzPjxZKNB04_TJsbqvDAALMGQACKleAUpsBJkSR_3eKNQQ")
-        bot.send_message("@warpscanner",ad1 ,parse_mode='Markdown',reply_markup=markup)
-        bot.send_sticker("@warpscanner","CAACAgQAAxkBAX2LwWbTdiwXZXzPjxZKNB04_TJsbqvDAALMGQACKleAUpsBJkSR_3eKNQQ")
-        bot.send_message("@warpscanner",ad2,parse_mode='Markdown',reply_markup=markup)
+        bot.send_sticker(CH_ID,"CAACAgQAAxkBAX2LwWbTdiwXZXzPjxZKNB04_TJsbqvDAALMGQACKleAUpsBJkSR_3eKNQQ")
+        bot.send_message(CH_ID,ad1 ,parse_mode='Markdown',reply_markup=markup)
+        bot.send_sticker(CH_ID,"CAACAgQAAxkBAX2LwWbTdiwXZXzPjxZKNB04_TJsbqvDAALMGQACKleAUpsBJkSR_3eKNQQ")
+        bot.send_message(CH_ID,ad2,parse_mode='Markdown',reply_markup=markup)
         with open(name, "rb") as f:
              
-            bot.send_document("@warpscanner",f,caption="for WireGuard :/  \U0001FAF5")
+            bot.send_document(CH_ID,f,caption="for WireGuard :/  \U0001FAF5")
         with open("wg_"+name, "rb") as f:
              
-            bot.send_document("@warpscanner",f,caption="for WgTunnel :/  \U0001FAF5")
+            bot.send_document(CH_ID,f,caption="for WgTunnel :/  \U0001FAF5")
 
         # with open("sing-box-hiddify.json", "rb") as file :
-        #     bot.send_document("@warpscanner",file,caption="کانفیگ برای هیدیفای \U0001F97A")
+        #     bot.send_document(CH_ID,file,caption="کانفیگ برای هیدیفای \U0001F97A")
         os.remove(name)
         os.remove("wg_"+name)
         time.sleep(3600*8)
