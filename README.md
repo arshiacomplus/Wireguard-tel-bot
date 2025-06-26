@@ -47,7 +47,7 @@ pip install -r requirements.txt
 **۳. پیکربندی متغیرها:**
  فایل پایتون  در مسیر اصلی پروژه قرار بدید و اطلاعات زیر را در آن قرار دهید.
 
-```dotenv
+```python
 # توکن ربات تلگرام که از BotFather دریافت کرده‌اید
 bot = telebot.TeleBot("YOUR_TELEGRAM_BOT_TOKEN")
 
