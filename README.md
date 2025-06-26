@@ -49,10 +49,10 @@ pip install -r requirements.txt
 
 ```dotenv
 # توکن ربات تلگرام که از BotFather دریافت کرده‌اید
-BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
+bot = telebot.TeleBot("YOUR_TELEGRAM_BOT_TOKEN")
 
 # شناسه کانال تلگرامی که می‌خواهید کانفیگ در آن ارسال شود (باید با -100 شروع شود)
-CHANNEL_ID="-100xxxxxxxxxx"
+CH_ID="@channel"
 
 ```
 
