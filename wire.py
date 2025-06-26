@@ -19,7 +19,7 @@ from retrying import retry
 from requests.exceptions import ConnectionError
 import subprocess
 import platform
-bot = telebot.TeleBot("token")
+bot = telebot.TeleBot("YOUR_TELEGRAM_BOT_TOKEN")
 CH_ID="@warpscanner"
 ips=["162.159.193.96:878", "162.159.193.133:894","162.159.195.54:894","162.159.192.65:894","162.159.192.3:908","162.159.195.166:878","162.159.195.7:894", "162.159.192.214:894","162.159.193.84:878"]
 ipsv6=["[2606:4700:d0::6996:c14:bcb0:b1d2]:878","[2606:4700:d1::a4b9:95c0:37ca:601e]:878","[2606:4700:d0::7050:964d:9980:9067]:878","[2606:4700:d0::cfcb:5601:66a:e8e8]:878","[2606:4700:d0::45dd:b927:8c4d:ceec]:878","[2606:4700:d1::d3f:23c9:46fc:c876]:878"]
